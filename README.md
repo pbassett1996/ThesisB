@@ -1,93 +1,56 @@
-# ThesisB
-The following repository satisify's the faculty thesis rules. It includes all the MATLAB simulation's used to validated the software designs in Group 33's Thesis B. A brief description of each program is provided:
+# Thesis B
 
-# Project Title
-
-One Paragraph of project description goes here
+The following repository satisify's the faculty thesis rules. It includes all the MATLAB simulation's used to validated the software designs in Group 33's Thesis B. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The programs are designed to be run on MATLAB/Simulink. Included in the repository are the .mat files for GPS and IMU data used in some of the simulations. Simply downloading the program files and running them on MATLAB will suffice. The zip file "Octocopter_Simulink_Model.zip" contains the simulink model, it must be extracted prior to its use.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+All programs are to be run on MATLAB. The following is a list of add ons necessary:
+- Simulink
+- Simulink Control Design
+- Signal Processing Toolbox
+- Control Systems Toolbox
+- Communications Toolbox
+- Aerospace Toolbox
+- Aerospace Blockset
 
-```
-Give examples
-```
+### Break down of programs
 
-### Installing
+Octocopter_Simulink_Model.zip
+The zip file contiains all the necessary components for an octocopter simulation model. The purpose of this is to see the interaction of the control system design with the octocopters dynamics. The model includes an inertial measurement unit (IMU), pressure simulation, and a sensor fusion model. The model also allows the extraction of realistic data necessary for the simulation of other software designs.
 
-A step by step series of examples that tell you how to get a development env running
+Control_System.m
+This file simply takes the GPS informaion from the octocopter simulnk model and plots the horizontal and vertical displacments with time. It is intended for real-time analysis so that the behaviour of the contorl systems can be verified.
 
-Say what the step will be
+EKF_Sim.m
+This files uses the IMU and GPS information from the octocopter simulink model and fuses them together using an Extended Kalman Filter (EKF). The program plots the vehicle's position using the actual, inertial and EKF measurements. This allows direct comparison between the different methods.
 
-```
-Give the example
-```
+obstacle_avoidance.m
+This program is used for verification of the collision avoiance system. Laser data attained from Jose Guivant in MTRN4010 is clustered into potential obstacles in the vehicle's path, and then a potential field algorithm is applied to allow the vehicle to navigate through the objects.
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+spectrum_sensing.m
+This program is used for the validation of the spectrum sensing algorithm. A virtual radio spectrum is created with noise and attenuation added. A small pocket of "low interference" is created. The algorithm is used to identify this desirable frequency band usin
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [MATLAB](https://www.mathworks.com/products/matlab.html) - Desktop environment used
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Markus Mikkelsen](https://pdfs.semanticscholar.org/4e00/fa5e741040b19252e88d4a781c423402c9bc.pdf) - Development of a multirotor Simulink model
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Peter Bassett**
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thanks to David Lyon for providing guidance throughout the Thesis A and Thesis B projects
+* Thanks to Jose Guivant who created the laser data for the obstacle avoidance simulation
+
 
 
 

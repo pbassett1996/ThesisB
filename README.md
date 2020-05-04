@@ -20,7 +20,7 @@ All programs are to be run on MATLAB. The following is a list of add ons necessa
 ### Break down of programs
 
 Octocopter_Simulink_Model.zip
-The zip file contiains all the necessary components for an octocopter simulation model. The purpose of this is to see the interaction of the control system design with the octocopters dynamics. The model includes an inertial measurement unit (IMU), pressure simulation, and a sensor fusion model. The model also allows the extraction of realistic data necessary for the simulation of other software designs.
+The zip file contains all the necessary components for an octocopter simulation model. The purpose of this is to see the interaction of the control system design with the octocopters dynamics. The model includes an inertial measurement unit (IMU), pressure simulation, and a sensor fusion model. The model also allows the extraction of realistic data necessary for the simulation of other software designs.
 
 Control_System.m
 This file simply takes the GPS informaion from the octocopter simulnk model and plots the horizontal and vertical displacments with time. It is intended for real-time analysis so that the behaviour of the contorl systems can be verified.

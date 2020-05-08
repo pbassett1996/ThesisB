@@ -40,7 +40,7 @@ This program is used for the validation of the spectrum sensing algorithm. A vir
 
 ## Contributing
 
-* [Markus Mikkelsen](https://pdfs.semanticscholar.org/4e00/fa5e741040b19252e88d4a781c423402c9bc.pdf) - Development of a multirotor Simulink model
+* [Adam Polak](http://polakiumengineering.com/downloads/APM_Simulink_Documentation_11042013.pdf) - APM Multicopter Development Kit for Simulink
 
 ## Authors
 
